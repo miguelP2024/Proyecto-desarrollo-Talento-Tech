@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab3</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+// Ejercicio 1: Verificar si un número es positivo, negativo o cero
+// Escribe un programa que solicite un número al usuario y luego imprima un mensaje indicando si el número es positivo, negativo o cero.
+
+var numero = parseInt(prompt("Ingresa cualquier número:"))
+if (numero < 0 ){
+    document.write("El número ", numero, " es negativo <br>")
+
+}
+
+else if (numero > 0) {
+    document.write("El número ", numero, " es positivo <br>" )
+
+}
+
+else {
+    document.write("El número ", numero, " es igual a 0 o neutro <br>")
+
+}
+
+
+// Ejercicio 2: Determinar si un número es par o impar
+
+// Escribe un programa que solicite un número al usuario y luego imprima un mensaje indicando si el número es par o impar.
+
+var numero2 = parseInt(prompt("Escribe cualquier número entero: "))
+if (numero2%2 == 0) {
+     document.write("El número ", numero2, " es par <br>")
+
+}
+
+else  {
+    document.write("El número ", numero2, " es impar <br>")
+}
+
+
+// Ejercicio 3: Validar la edad para votar
+// Escribe un programa que solicite la edad del usuario y luego imprima un mensaje indicando si la persona es mayor de edad (18 años o más) y puede votar.
+
+var edad = parseInt(prompt("Escribe tu edad en años:"))
+var nacionalidad = prompt("Ingresa tu pais de nacimiento: ")
+if (edad >= 18 && nacionalidad=="Colombia") {
+    document.write("Estás autorizado a votar en Colombia <br>")
+}
+else if (edad >= 18 && nacionalidad=="colombia") {
+    document.write("Estás autorizado a votar en Colombia <br>")
+}
+else{
+    document.write("No estás autorizado para votar en Colombia <br>")
+}
+
+
+// Ejercicio 4: Determinar el mayor de dos números
+// Escribe un programa que solicite dos números al usuario y luego imprima cuál de ellos es mayor o si son iguales.
+
+var primernumero = parseFloat(prompt("Ingresa un número cualquiera:"))
+var segundonumero = parseFloat(prompt("Ingresa otro número cualquiera"))
+if(primernumero>segundonumero){
+    document.write("El primer número que pensaste ", primernumero, 
+    ", es mayor que el segundo número que pensaste ", segundonumero, ", entonces:", primernumero, " > ", segundonumero, "<br>")
+}
+else if(primernumero<segundonumero){ 
+    document.write("El primer número que pensaste ", primernumero, 
+    ", es menor que el segundo número que pensaste ", segundonumero, ", entonces:", primernumero, " < ", segundonumero, "<br>")
+}
+else{
+    document.write("El primer número que pensaste ", primernumero, 
+    ", es igual al segundo número que pensaste ", segundonumero, ", entonces:", primernumero, " = ", segundonumero, "<br>")
+
+}
+
+// Ejercicio 5: Calcular descuento en una compra
+// Escribe un programa que solicite el monto de una compra y luego aplique un descuento del 10% si el monto es mayor a $100.
+
+var precio = parseInt(prompt("Ingresa el valor de la compra"))
+if(precio>100){
+    descuento= precio - precio*0.1
+    document.write("El descuento se aplica, del valor inicial ", precio, "$ la compra queda en ", descuento, "$ <br>")
+}
+else{
+    descuento=precio
+    document.write("No se aplica el descuento, el precio final es: ", precio, "$ <br>")
+}
+
+// Ejercicio 6: Convertir un número a un día de la semana [Switch]
+// Escribe un programa que solicite un número del 1 al 7 y muestre el día correspondiente de la semana (1 = Lunes, 2 = Martes, etc.).
+
+var dia = parseInt(prompt("Ingresa el número del día que quieres saber"))
+switch(dia){
+    case 1:
+        document.write("El día es: Lunes <br>")
+        break;
+    case 2:
+        document.write("El día es: Martes <br>")
+        break;
+    case 3:
+        document.write("El día es: Miercoles <br>")
+        break;
+    case 4:
+        document.write("El día es: Jueves <br>")
+        break;
+    case 5:
+        document.write("El día es: Viernes <br>")
+        break;
+    case 6:
+        document.write("El día es: Sabado <br>")
+        break;
+    case 7:
+        document.write("El día es: Domingo <br>")
+        break;
+}
+// Ejercicio 7: Determinar la estación del año según el mes [Swtich]
+// Escribe un programa que solicite un número de mes (1-12) y determine la estación del año (primavera, verano, otoño, invierno).
+var mes  = parseInt(prompt("Ingrese el número del mes: "))
+    switch(mes){
+    case 2:
+    case 3:
+    case 4:
+        document.write("Actualmente es primavera <br>")
+        break;
+    case 5:
+    case 6:
+    case 7:
+        document.write("Actualmente es verano <br>")
+        break;
+    case 8:
+    case 9:
+    case 10:
+        document.write("Actualmente es otoño <br>")
+        break;
+    case 11:
+    case 12:
+    case 1:
+        document.write("Actualmente es invierno <br>")
+        break;
+    }
+    
+
+
+
+</script>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+
+// //funcion bloque de codigo que hace algo en especifico
+// function saludar(nombre, apellido){
+//     document.write("hola" + " " + nombre + " " + apellido + "<br>")
+// }
+
+// function despedirse(){
+//     document.write("adios <br>")
+// }
+
+//  saludar("Miguel", "Palacios")
+
+
+
+// //implementar una calculadora usando funciones
+
+
+// //definicion de la funcion
+// function suma (num1, num2){
+//     return num1+num2
+// }
+
+// function resta (num1, num2){
+//     return num1-num2
+// }
+
+
+// function multiplicacion(num1, num2) {
+//     return num1*num2
+// }
+
+// function division (num1, num2){
+//     return num1/num2
+// }
+
+// //llamado de la funcion
+// var n1 = parseInt(prompt("ingrese el numero 1: "))
+// var n2 = parseInt(prompt("ingrese el numero 2: "))
+// var operacion = prompt("ingrese la operación: ")
+// var resultado = 0
+
+// switch(operacion){
+//     case "suma":
+//         resultado = suma(n1, n2)
+//         break;
+//     case "resta":
+//         resultado = resta(n1, n2)
+//         break;
+//     case "multiplicacion":
+//         resultado = multiplicacion(n1, n2)
+//         break;
+//     case "division":
+//         resultado = division(n1, n2)
+//         break;
+// }
+
+// document.write("El resultado de la " + operacion + " es " + resultado)
+
+// //crear una funcion que reciba un numero y diga a cual mes corresponde
+
+// function validarmes(numero){
+//     var mes = ""
+
+//     switch(numero){
+//         case 1 :
+//             mes = "enero"
+//             break;
+//         case 2 :
+//             mes = "febrero"
+//             break;
+//             case 3 :
+//             mes = "marzo"
+//             break;
+//             case 4 :
+//             mes = "abril"
+//             break;
+//             case 5 :
+//             mes = "mayo"
+//             break;
+//             case 6 :
+//             mes = "junio"
+//             break;
+//             case 7 :
+//             mes = "julio"
+//             break;
+//             case 8 :
+//             mes = "agosto"
+//             break;
+//             case 9 :
+//             mes = "septiembre"
+//             break;
+//             case 10 :
+//             mes = "octubre"
+//             break;
+//             case 11 :
+//             mes = "noviembre"
+//             break;
+//             case 12 :
+//             mes = "diciembre"
+//             break;
+//             default :
+//             mes = "el numero puesto no corresponde a ningun mes"
+//     }
+//     return mes
+// }
+// //llamado
+
+// var numeromes = parseInt(prompt("Ingrese el numero del mes que quiere saber: "))
+// document.write(validarmes(numeromes))
+
+
+// //crear una funcion que reciba 4 numeros y retorne el promedio
+
+// function calcular_promedio(num1, num2, num3, num4){
+//     promedio = (num1 + num2 + num3 + num4)/4
+
+//     return promedio
+// }
+
+// //llamado
+// n1= parseInt(prompt("ingrese el primer numero: "))
+// n2= parseInt(prompt("ingrese el segundo numero: "))
+// n3= parseInt(prompt("ingrese el tercer numero: "))
+// n4= parseInt(prompt("ingrese el cuarto numero: "))
+
+// document.write("el valor del promedio es: " + calcular_promedio(n1, n2, n3, n4) + "<br><br>")
+
+
+
+// // crear una funcion que reciba un numero y retorne su factorial
+
+// function calcular_factorial(num){
+//    var factorial=1;
+//    for(var i=num; i>0; i--){
+//     //                factorial*i
+//     factorial= factorial*i // 1*5 => 5*4 => 20*3 => 60*2 => 120*1 = 120
+    
+//    }
+//    return factorial
+// }
+
+// //llamado
+// var numero = parseInt(prompt("Ingrese el numero: ")) 
+
+// document.write("El factorial de " + numero + " es " + calcular_factorial(numero) + "<br>")
+
+
+
+// // crear una funcion que reciba una edad y retorne si es apto para votar
+
+// function autorizado_votar (edad, nacionalidad){
+// if (edad >= 18 && nacionalidad=="Colombia") {
+//     document.write("Estás autorizado a votar en Colombia <br>")
+// }
+// else if (edad >= 18 && nacionalidad=="colombia" || nacionalidad=="Colombia") {
+//     return"Estás autorizado a votar en Colombia <br>"
+// }
+// else{
+//     return"No estás autorizado para votar en Colombia <br>"
+// }
+// }
+
+// //llamado
+
+// var nacimiento = parseInt(prompt("Escribe tu edad en años:"))
+// var pais = prompt("Ingresa tu pais de nacimiento: ")
+// document.write(autorizado_votar(nacimiento, pais))
+
+
+
+//crear una funcion que reciba un array y retorne el número más alto
+function numero_mayor(array){
+    var mayor = array[0]
+    for( var i =0; i<=array.length; i++){
+        if(array[i]>mayor){
+            mayor=array[i]
+        }
+    }
+    return mayor
+}
+
+var numeros = [100, 75, 40, 5, 86, 212]
+document.write("El numero mayor es: " + numero_mayor(numeros) + "<br><br>")
+
+
+
+//crear una función que reciba un array de números y retorne el número más bajo
+
+
+//crear una funcion que reciba un array y retorne el número más alto
+function numero_menor(array){
+    var menor = array[0]
+    for( var i =0; i<=array.length; i++){
+        if(array[i]<menor){
+            menor=array[i]
+        }
+    }
+    return menor
+}
+
+var numeros = [100, 75, 40, 5, 86, 212]
+document.write("El numero menor es: " + numero_menor(numeros))
+
+//crear una funcion que reciba un array y retorne su segundo elemento
+
+function devolver_segundo (array){
+    return array[1]
+}
+nombres= ["Miguel", "Santiago", "Camilo", "Andrés"]
+
+document.write("<br><br>" + devolver_segundo(nombres))
+
+
+
+</script>
+
+
+</html>

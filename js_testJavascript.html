@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- etiqueta para usar javascript -->
+    <script>
+         var num1 = prompt("Ingrese el numero 1:")
+         var num2 = prompt("Ingrese el numero 2:")
+        
+         alert("Hola mundo") //Sirve para mostrar un mensaje apenas abre la pagina
+        console.log("Saludos") //Recordar: La consola se abre con inspección de pagina  
+         console.log(num1, num2)
+
+        var operacion = 30+5*2-6/3 
+        // En la jerarquía de operaciones, el orden es primero potenciación, segundo multiplicacion y division, 
+        // pero se hace primero el que esté más a la izquierda en caso de que aparezcan juntos
+        // dos elementos de la misma categoría
+        console.log(operacion) 
+
+        operacion = 3*2**3+8/2-13
+        console.log(operacion)
+
+        operacion = (2+2)**[(2*3)-14+10]+4
+        console.log(operacion)
+
+        // Dadas 3 notas calcular el promedio 2.5,4,3.2
+        var promedio = (2.5+4+3.2)/3
+        console.log(promedio)
+
+        // Convertir 18 grados celcius a grados fahrenheit
+        var temperatura = 18*(9/5)+32
+        console.log(temperatura)
+
+        // Calcular el area de un rectangulo, si el ancho es 4 y el alto es 8
+        var area = 4*8
+        console.log(area)
+
+        var exponenciacion = 3**3
+        console.log(exponenciacion)
+
+        var modulo = 7%3 //conocido como residuo
+        console.log(modulo)
+
+        var contador = 1
+        contador = contador+1 //quiere decir lo mismo que la siguiente linea
+        contador++ //aumenta de 1 en 1 el contador
+        console.log("el valor del contador es:", contador) //la sintaxis del alert es poniendo el +, no recibe comas
+        
+        contador = contador-1
+        contador--
+        console.log("el nuveo valor del contador es:",contador)
+
+        //Ejercicio Crear variables nombres, apellidos, edad y ciudad. En una variable llamada resultado
+        //concatenar los valores de todas las variables separadas por comas
+        var nombres = "Miguel Angel"
+        var apellidos = " Palacios Cardenas"
+        var edad = "19"
+        var ciudad = "Bogotá"
+
+        var resultado = nombres+", "+apellidos+", "+edad+", "+ciudad
+
+        console.log(resultado)
+
+        alert(typeof ciudad) //la función typeof te dice el tipo de dato que es, number, sring, bool, etc
+
+        document.write (resultado) //si quiero mostrar algo en pantalla de la pagina
+
+
+        var nombre = prompt("ingresa tu nombre")
+    document.write("El nombre ingresado es: ", nombre +"<br>")
+
+    
+    //Ingresar por medio del prompt su tipo de helado favorito
+    var helado = prompt("Ingresa tu tipo de helado favorito ")
+    document.write("El tipo de helado ingresado es: ", helado)
+
+
+    //calculadora
+   var num1 = parseInt(prompt("Ingrese el numero 1: "))
+   var num2 = parseInt(prompt("Ingrese el numero 2: "))
+   // Se puede usar parseFloat si es un número decimal
+
+   document.write("Los números ingresados son:", num1, ", ", num2, "<br>")
+   
+   var suma = num1+num2
+   document.write("la suma de los números es: ", suma, "<br>")
+
+   var resta = num1-num2
+   document.write("la resta de los números es:", resta, "<br>")
+
+   var multiplicacion = num1*num2
+   document.write("la multiplicación de los números es: ", multiplicacion, "<br>")
+
+   var potencia = num1**num2
+   document.write("la potenciación de los números es: ", potencia, "<br>")
+   
+   var division = num1/num2
+   document.write("la división de los números es: ", division, "<br>")
+
+   var residuo = num1%num2
+   document.write("el residuo de los números divididos es: ", residuo)
+
+        
+   /** Crear un algoritmo que reciba el alto y el ancho de un rectangulo y muestre en pantalla su area */
+   //calculadora
+   var ancho = parseInt(prompt("Ingrese el alto de su rectangulo en centimetros: "))
+   var alto = parseInt(prompt("Ingrese el ancho de su rectangulo en centimetros: "))
+
+   document.write("Los datos ingresados son:", ancho, "cm de ancho, y ", alto, "cm de alto", "<br>")
+   
+   var area = ancho*alto
+   document.write("el area de su rectangulo es de: ", area, "cm^2", "<br> <br>")
+
+   /**Crear un algoritmo que reciba el diametro y calcule el area de un circulo*/
+   var diametro = parseFloat(prompt("Ingrese el diametro de su circulo en centimetros: "))
+
+   const PI = 3.14159265359
+   document.write("El diametro ingresado es:", ancho, "cm", "<br>")
+   
+   var areacirc = (diametro/2)**2*PI
+   document.write("el area de su circulo es de: ", areacirc, "cm^2", "<br>")
+
+    //hacer una calculadora del indice de masa corporal (IMC)
+    var peso = parseFloat(prompt("Ingrese su peso en kilogramos: "))
+   var altura = parseFloat(prompt("Ingrese su altura en metros: "))
+
+   document.write("Los datos ingresados son:", peso, "kg de peso, y ", altura, "m de altura", "<br>")
+   
+   var imc = peso/(altura**2)
+   document.write("su indice de masa corporal (IMC) es de: ", imc, "kg/m^2", "<br> <br>")
+
+   //Verificacion mayor de edad 
+  var edad = parseInt(prompt("Ingrese su edad: "))
+  var mayorDeEdad = edad >= 18 
+  document.write("¿Es mayor de edad? ", mayorDeEdad)
+
+   //Verificacion aprobo o no 
+   var nota = parseFloat(prompt("Ingrese la nota: "))
+  const NOTA_APROBATORIA = 3.0
+  var aprobo = nota >= NOTA_APROBATORIA
+  document.write("¿El estudiante aprobó? ", aprobo)
+
+   //verificacion si el numero es par o no
+
+   var numero =parseFloat(prompt("ingrese el numero: "))
+   var residuo = numero%2 
+   var par = residuo == 0
+   document.write("¿El numero es " + numero + " par? ", par)
+
+    //verificacion si el numero es par o no EJERCICIO PROPIO
+
+    var numero =parseFloat(prompt("ingrese el numero: "))
+   var residuo = numero%2 
+
+   if (residuo == 0) {
+   document.write("El numero es " + numero + "  es par ")
+    }
+
+    else {
+    document.write("El numero es " + numero + "  es impar ")
+    }
+
+      //recordar conjuncion - and - &&
+    // recordar disyuncion - or - ||
+    //recordar negacion - not - !
+    //Implementar un algoritmo que permita verificar si una persona es apta para votar
+    // debe ser colombiano y ser mayor de edad
+
+    var edad = parseInt(prompt("ingrese su edad"))
+    var nacionalidad = prompt("ingrese la nacionalidad")
+
+    var puedeVotar = edad >=18 && nacionalidad == "colombiano"
+
+    document.write("¿Puede votar? ", puedeVotar)
+
+     //subsidio solo para no colombianos 
+  var nacionalidad = prompt("ingrese su nacionalidad: ")
+  var escolombiano = nacionalidad == "colombiano"
+  var aptosubsidio = nacionalidad =! escolombiano //negacion
+
+  document.write("¿puede recibir subsidio? ", aptosubsidio)
+ 
+
+   // Determinar si un numero ingresado es mayor que 1 y menor que 100
+
+   var numero = parseFloat(prompt("Ingresa un numero: "))
+    var cumple = numero > 1 && numero < 100
+    document.write ("¿El numero ", numero, " es mayor que 1 y menor que 100?: ", cumple, "<br> <br> ")
+
+    //Ingresando una nota y numero de asistencias, determinar si un estudiante aprueba 
+    // se aprueba con  una nota mayor o igual que 3 y con minimo 60 asistencias
+
+    var nota = parseFloat(prompt("Escribe tu nota definitiva: "))
+    var asistencias = parseInt(prompt("Escribe tu numero de asistencias totales: "))
+    
+    var aprobo = nota >= 3.0 && asistencias>=60 
+
+    document.write("El estudiante tiene una nota definitiva de ", nota, 
+    " y ", asistencias, " asistencias. ¿el estudiante aprobó?: ", aprobo, "<br><br>")
+
+    //Ingresando una estacion, determinar si es tiempo de sembrar, teniendo en cuenta que
+    //solo se puede sembrar en invierno u otoño
+    var estacion = prompt("Escribe la estación actual: ")
+    var sembrar = estacion == "verano" || estacion=="otoño"
+
+    document.write("¿Es tiempo de sembrar?: ", sembrar, "<br><br>")
+
+    //Ingresando un animal, determinar si es domestico, teniendo en cuenta que solo
+    // gatos, perros o pajaros son domesticos
+    var animal = prompt("Escribe un animal: ")
+    var domestico = animal =="perro" || animal=="gato" || animal =="pajaro"
+    document.write("¿Un ", animal, " es un animal domestico? ", domestico)
+    
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ciclosfor</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    // var multiplos7 = 0
+    // // para cada elemento que comienza en 1 y va hasta un numero menor o igual que 100 aumentando
+    // // de 1 en 1 
+    // //entonces hacer
+    // for(var i = 1; i<=100; i++){
+    //     if(i%7==0){
+    //         multiplos7++
+    //     }
+    // }
+    // document.write("La cantidad de multiplos de 7 del 1 al 100 es:", multiplos7)
+
+
+     /**
+     * Hacer un algoritmo que calcule el factorial de un numero
+    */
+   var num = parseInt(prompt("Ingrese el numero: ")) // 5
+   var factorial=1;
+   for(var i=num; i>0; i--){
+    //                factorial*i
+    factorial= factorial*i // 1*5 => 5*4 => 20*3 => 60*2 => 120*1 = 120
+   }
+   document.write("El factorial de " + num + " es " + factorial)
+
+
+
+
+</script>
+</html>

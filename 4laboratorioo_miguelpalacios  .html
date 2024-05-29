@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Universidad nacional de Colombia</title>
+</head>
+
+<body id="body">
+
+    <div class="Selector-tema">
+
+        <select name="" id="tema" onchange="cambiarTema()">
+            <option value="dark"> Oscuro </option>
+            <option value="light">Claro</option>
+            <option value="crazy">Loco</option>
+        </select>
+        
+    </div>
+
+    <div>
+        <h1 class="titulo_principal"> La universidad Nacional de Colombia </h1>
+
+        <img class="imagen1" src="data:image/png;base64,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">
+
+    </div>
+
+    <div>
+
+        <p> La universidad Nacional de Colombia es una de las grandes instituciones de educación superior, ocupando el primer puesto en el ranking nacional en carreras
+            como ingeniería mecánica, mecatrónica, sistemas y demás, contando con acreditación internacional y con una de las mejores mallas curriculares de todo el país 
+            para dichas carreras. Caracterizada por una gran y variada comunidad estudiantil, la universidad Nacional de Colombia resalta por su diversidad y gran cantidad de 
+            actividades  extracurriculares que se pueden realizar dentro del campus tales como deportes (fútbol, voleibol, baloncesto), semilleros de investigación o danza.
+        </p>
+
+    </div>
+
+    <div>
+
+        <p> Los principales programas curriculares ofertados por esta institución son:</p>
+
+        
+        <ol class="estilo-lista1">  
+            <li> Ingeniería mecánica </li>
+            <li> Ingeniería mecatrónica </li>
+            <li> Ingeniería de sistemas </li>
+            <li> Medicina </li>
+            <li> Ciencias de la computación </li>
+        </ol>
+
+    </div>
+
+    <div>
+
+        <p> Si tienes alguna consulta sobre los servicios, procesos de admisión o solicitudes puedes contactarnos por los siguientes canales de comunicación: </p>
+        <ul class="estilo-lista2">  
+            <li> cda_bog@unal.edu.co </li>
+            <li> (+57 601) 316 5000 </li>
+            <li>  <a href="https://unal.edu.co/" 
+                target="_blank"> Página  web oficial  </a> </li>
+            <li> Carrera 45 # 26-85 </li>
+            
+        </ul>
+
+    </div>
+    
+    <div>
+
+        Aquí te dejamos una pequeña muestra de lo que es la universidad nacional de Colombia:
+    </div>
+
+    <br> 
+
+    <div>
+        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/V37xAMOgbLI?si=t4t7SAboBb9irhU4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+    </div>
+
+
+    <h1> Formulario de datos de contacto </h1>
+
+    <p> Para poder postularte y notificarte sobre las novedades de tu postulación debes llenar el siguiente formulario </p>
+
+    <form method="post">
+        <fieldset>
+            <legend> Información personal del aspirante</legend>
+            
+            <br>
+
+            <!-- Nombre -->
+            <label for=""> Nombres y apellidos </label>
+            <input type="text" placeholder="Escriba sus nombres y apellidos completos" required name="nombre" size="35" id="nombre">
+
+            <br> <br>
+
+            <!-- Cedula -->
+
+            <label for=""> Tipo de documento </label>
+            <select class="formulario1" name="tipo_doc" id="tipo_documento">
+
+                <option value="Cedula de ciudadania"> Cedula de ciudadania </option>
+                <option value="Tarjeta de identidad"> Tarjeta de identidad </option>
+                <option value="Cedula de extrangería"> Cedula de extrangería </option>
+                <option value="Otro"> Otro </option>
+
+            </select>
+    
+            <label for=""> En caso de ser otro, ¿cual? </label>
+            <input type="text" name="otro_doc" id="otro_doc">
+
+            <br><br>
+
+            <label for=""> Número de documento </label>
+            <input type="number" placeholder="Digite sin espacios" required name="Num_doc" id="numero_doc">
+
+            <br> <br>
+
+            <label for=""> Ciudad de residencia </label>
+            <select class="formulario1" name="ciudad_resi" id="ciudad_residencia">
+    
+                    <option value="Manizales"> Manizales </option>
+                    <option value="Bogota"> Bogota </option>
+                    <option value="Medellin"> Medellin </option>
+                    <option value="Cali"> Cali </option>
+                    <option value="Otra"> Otra </option>
+    
+            </select>
+            <label for="">En caso de ser otra ciudad ¿cual? </label>
+            <input class="formulario1" type="text" name="otra_ciudad" id="otra_ciudad">
+
+            <br> <br>
+
+            <label for=""> Telefono de contacto</label>
+            <input class="formulario1" type="tel" required name="telefono" placeholder="Numero movil preferiblemente" id="tel_contacto">
+
+            <br><br>
+
+            <label for=""> Direccion de residencia (calle - carrera - edificio)</label>
+            <input class="formulario1" type="text" placeholder="Digite primero la calle" required name="direccion" id="direccion_residencia">
+
+            <br><br>
+
+            <label for=""> Correo electronico personal </label>
+            <input class="formulario1" type="email" placeholder="Preferiblemente que sea gmail" required name="email" id="correo_electronico">
+            
+            <br><br>
+
+            <label for=""> Documentos anexos escaneados (Cedula, hoja de vida, entre otros )</label>
+            <input class="formulario1" type="file" required name="doc_escaneados" id="doc_anexos">
+
+            <br><br>
+
+            <label for=""> Fecha de nacimiento </label>
+            <input class="formulario1" type="date" required min="1940-01-01" max="2024-05-01" value="2024-05-01" name="fecha_nacimiento" id="fecha_nacimiento">
+
+            <br><br>
+
+            <button type="button" onclick="enviarFormulario()"> Enviar </button>
+    
+
+
+        </fieldset>
+
+
+    </form>
+
+    <br><br>
+
+    <p> En caso de que el aspirante sea menor de edad, diligenciar el siguiente formulario con los datos del acudiente, 
+        o adulto responsable
+    </p>
+
+    <form method="post">
+
+       <fieldset>
+        <legend> Información personal del acudiente</legend>
+        <br>
+
+            <label for=""> Nombres y apellidos </label>
+            <input class="formulario2" type="text" placeholder="Nombres y apellidos completos" size="35" name="nombre_acudiente" id="nombres_acudiente">
+
+            <br><br>
+
+            <label for=""> Numero movil de contacto </label>
+            <input class="formulario2" type="tel" placeholder="Numero movil unicamente" name="tel_acudiente" id="tel_acudiente">
+
+            <br><br>
+
+            <label for=""> Parentezco </label>
+            <select class="formulario2" name="parentezco" id="parentezco">
+
+                <option value="Padre"> Padre </option>
+                <option value="Madre"> Madre </option>
+                <option value="Hermano"> Hermano </option>
+                <option value="Familiar"> Otro familiar (tio, abuelo, etc) </option>
+                <option value="amigo"> Amigo - Conocido</option>
+                <option value="Otro"> Otro </option>
+
+            </select>
+            <label for="">En caso de ser otro ¿cual? </label>
+            <input class="formulario2" type="text" name="otro_parentezco" id="otro_parentezco">
+
+            <br><br>
+
+            <label for=""> Correo electronico personal</label>
+            <input class="formulario2" type="email" placeholder="Gmail en preferencia" name="Correo_acudiente" id="coreo_electronico_acudiente">
+
+            <br><br>
+
+            <button type="button" onclick="enviarFormulario2()"> Enviar </button>
+
+
+       </fieldset>
+
+    </form>
+
+    <p> A continuacion te dejamos una tabla con los puntajes promedio de los admitidos para las carreras más solicitadas para que te animes a postularte</p>
+
+    <h1> Tabla de admitidos </h1>
+
+    <table class="styled-table">
+        <tr>
+
+            <th> Nombre y apellido </th>
+            <th> Programa curricular </th>
+            <th> Sede de admision </th>
+            <th> Puntaje de admision  </th>
+            <th> Semestre de admision </th>
+
+        </tr>
+
+        <tr>
+
+            <td> Miguel Palacios </td>
+            <td> Ing. Mecanica </td>
+            <td> Bogota </td>
+            <td> 620 </td>
+            <td> 2022-1 </td>
+
+        </tr>
+
+        <tr>
+
+            <td> Juan Perez </td>
+            <td> Economía </td>
+            <td> Bogotá </td>
+            <td> 610 </td>
+            <td> 2022-1 </td>
+
+        </tr>
+
+        <tr>
+
+            <td> Lorena Perez </td>
+            <td> Ing.Sistemas </td>
+            <td> Bogotá </td>
+            <td> 640 </td>
+            <td> 2022-2 </td>
+
+        </tr>
+
+        <tr>
+
+            <td> David Ortiz </td>
+            <td> Enfermeria </td>
+            <td> Caribe </td>
+            <td> 590 </td>
+            <td> 2022-2 </td>
+
+        </tr>
+
+        <tr>
+
+            <td> Sebastian Rodriguez </td>
+            <td> Medicina </td>
+            <td> Bogota </td>
+            <td> 710 </td>
+            <td> 2022-2 </td>
+
+        </tr>
+
+        <tr>
+
+            <td> Sofia Mahecha </td>
+            <td> Derecho </td>
+            <td> Medellin </td>
+            <td> 650 </td>
+            <td> 2022-2 </td>
+
+        </tr>
+
+        <tr>
+
+            <td> Daniel Suarez </td>
+            <td> Cine y TV </td>
+            <td> Medellin </td>
+            <td> 650 </td>
+            <td> 2023-1 </td>
+
+        </tr>
+
+        <tr>
+
+            <td> Johan Suarez </td>
+            <td> Geografía </td>
+            <td> Caribe </td>
+            <td> 645 </td>
+            <td> 2023-1 </td>
+
+        </tr>
+
+        <tr>
+
+            <td> Kevin Landinez </td>
+            <td> Administracion de empresas </td>
+            <td> Bogota </td>
+            <td> 630 </td>
+            <td> 2023-1 </td>
+
+        </tr>
+
+        <tr>
+
+            <td> Oscar Parra </td>
+            <td> Ing. Civil </td>
+            <td> Bogota </td>
+            <td> 610 </td>
+            <td> 2023-2 </td>
+
+        </tr>
+
+        <tr>
+
+            <td> José Moncado </td>
+            <td> Ing. electronica </td>
+            <td> Medellin </td>
+            <td> 605 </td>
+            <td> 2023-2 </td>
+
+        </tr>
+
+        
+
+
+
+    </table>
+
+    <p> Si te ha gustado lo que has visto, ¿que esperas para inscribirte en la mejor universidad del país? ¡Está al alcance de un click!</p>
+
+</body>
+
+<script>
+
+    function cambiarTema(){
+        //elemento que va a cambiar
+        var body = document.getElementById("body")
+        //valor del selector de temas
+        var tema = document.getElementById("tema").value
+        var fondo = ""
+        var letra = ""
+        
+        if(tema == "light"){
+            fondo = "white"
+            letra = "black"
+        }
+        else if(tema == "dark"){
+            fondo = "black"
+            letra = "white"
+        }
+        else if (tema == "crazy"){
+            fondo = "tomato"
+            letra = "yellow"
+        }
+
+        //modificamos el estilo de la pagina
+        body.style.backgroundColor = fondo
+        body.style.color= letra
+    
+    }
+
+    function enviarFormulario(){
+
+        var nombre = document.getElementById("nombre").value
+        var tipo_documento = document.getElementById("tipo_documento").value
+        var otro_doc = document.getElementById("otro_doc").value
+        var numero_doc = document.getElementById("numero_doc").value
+        var ciudad_residencia = document.getElementById("ciudad_residencia").value
+        var otra_ciudad = document.getElementById("otra_ciudad").value
+        var tel_contacto = document.getElementById("tel_contacto").value
+        var direccion_residencia = document.getElementById("direccion_residencia").value
+        var correo_electronico = document.getElementById("correo_electronico").value
+        var doc_anexos = document.getElementById("doc_anexos").value
+        var fecha_nacimiento = document.getElementById("fecha_nacimiento").value
+        
+
+        alert("Las respuestas del formulario son: " + nombre + " " + tipo_documento + " " + otro_doc + " " + numero_doc + " " 
+        + ciudad_residencia + " " + otra_ciudad + " " + tel_contacto + " " + direccion_residencia + " "
+        + correo_electronico + " " + doc_anexos + " " + fecha_nacimiento + " " 
+        )
+    }
+
+    function enviarFormulario2(){
+
+    var nombres_acudiente = document.getElementById("nombres_acudiente").value
+    var tel_acudiente = document.getElementById("tel_acudiente").value
+    var parentezco = document.getElementById("parentezco").value
+    var otro_parentezco = document.getElementById("otro_parentezco").value 
+    var coreo_electronico_acudiente = document.getElementById("coreo_electronico_acudiente").value 
+
+    alert("Las respuestas del formulario son: " + nombres_acudiente + " " + tel_acudiente 
+    + " " + parentezco + " " + otro_parentezco + " " + coreo_electronico_acudiente + " "
+        )
+    }
+
+
+
+
+
+
+</script>
+
+<style>
+
+    .imagen1{
+        width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgb(43, 226, 150);
+    }
+
+    h1 {
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    .titulo_principal {
+        text-align: center;
+    }
+
+    .formulario1 {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid #04918a;
+    border-radius: 5px;
+    box-sizing: border-box;
+    }
+
+    .formulario2 {
+        width: 100%;
+    padding: 10px 15px;
+    margin: 7px;
+    display: inline-block;
+    border: 1px solid #040d91;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    }
+
+    .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    text-align: center;
+
+    }
+
+    .styled-table tr:nth-child(even){
+    background-color: #ddd;
+   }
+
+   .styled-table  th{
+    background-color:  rgb(43, 226, 150);
+   }
+
+   th, td {
+    border: 1px solid;
+    padding: 10px;
+    border-color: #000000;
+   }
+
+  
+.estilo-lista1 {
+  list-style-type: none;
+  padding: 0;
+  list-style-type: decimal; 
+
+}
+
+.estilo-lista1 li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.estilo-lista1 li:hover {
+  background-color: #f2f2f2;
+}
+
+.estilo-lista2{
+    list-style-type: square; 
+
+}
+
+
+
+
+</style>
+
+</html>

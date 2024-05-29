@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conjuncion_html-js</title>
+</head>
+
+
+
+
+<body>
+    <div id="seccion1">
+        Seccion 1
+    </div>
+    <div id="seccion2">
+        Seccion2
+    </div>
+    
+    <form action="">
+        <label for=""> Nombre</label>
+        <input type="text" id="nombre">
+        <label for="">Descripcion</label>
+        <textarea id="descripcion"></textarea>
+        <button type="button" onclick="saludar()"> Enviar </button> 
+        <!-- El type="button" sirve para que cuando le demos enviar no recargue la pagina y deje en
+             el formulario los datos puestos
+             el oneclick="" es un evento que hace lo que se le dice cuando se le da click en
+             el elemento sobre el cual está puesto-->
+        <hr>
+
+        <label for="">Seccion</label>
+        <select name="" id="seccion_seleccionada">
+            <option value="seccion1"> 1 </option>
+            <option value="seccion2"> 2 </option>
+        </select>
+
+
+        <label for=""> Tamaño </label>
+        <select name="" id="size"> 
+            <option value="100px"> Pequeño </option>
+            <option value="200px"> Mediano </option>
+            <option value="300px"> Grande </option>
+        </select>
+
+        <button type="button" onclick="cambiar_color('green')"> Verde </button>
+        <button type="button" onclick="cambiar_color('blue')"> Azul </button>
+        <button type="button" onclick="cambiar_color('red')"> Rojo </button>
+        <button type="button" onclick="cambiar_color('yellow')"> Amarillo </button>
+        <button type="button" onclick="cambiar_color('black')"> Negro </button>
+        <button type="button" onclick="cambiar_color('brown')"> Cafe </button>
+
+    </form>
+
+</body>
+
+
+
+<script>
+    //se define una función que muestre en pantalla un saludo
+    function saludar(){
+        var nombre = document.getElementById("nombre").value
+        //el getElementById sirve para que el programa busque y acceda al valor de una etiqueta
+        //que tenga el id nombre y acceda a su valor para hacer algo
+        alert("hola " + nombre)
+    }
+
+    function cambiar_color (color){
+        //Obtenemos el valor del selector
+        var seccionseleccionada= document.getElementById("seccion_seleccionada").value
+        //cambiamos el color de fondo
+        document.getElementById(seccionseleccionada).style.backgroundColor = color
+        //cambiamos el color de la letra
+        document.getElementById(seccionseleccionada).style.color= 'white'
+        //obtenemos el tamaño seleccionado
+        var tamaño = document.getElementById("size").value
+        //cambiamos el tamaño
+        document.getElementById(seccionseleccionada).style.width= tamaño
+        document.getElementById(seccionseleccionada).style.height= tamaño
+
+
+
+    }
+
+</script>
+
+</html>

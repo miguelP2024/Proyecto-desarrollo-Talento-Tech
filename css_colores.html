@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!-- importar librería para los íconos -->
+</head>
+<body>
+
+    <div class="color1 bordes margenes padding">
+        Elemento 1
+    </div>
+
+    <div class="color2 bordes margenes padding">
+        Elemento 2
+    </div>
+
+    <div>
+        <h1 class="text-shadow"> Titulo <i class="fa-solid fa-snowflake"></i> </h1> <!-- Ejemplo de iconos: <i class="fa-solid fa-snowflake"></i> -->
+        <p class="alineacion-texto"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua   </p>
+    </div>
+    
+    <button> Ejemplo futbol <i class="fa-solid fa-futbol"></i></button>
+    <br><br>
+    <a href="https://www.ea.com/es-es/games/ea-sports-fc/fc-24" class="enlace"> Pagina oficial Ea Fc24</a> <!-- Ejemplo de un hipervinculo -->
+
+    <div> 
+        <h1> Listas </h1>
+
+        <ul>
+            <li>Huevos</li>
+            <li>Leche </li>
+            <li>Carne </li>
+            <li>Pescado</li>
+        </ul>
+
+
+    </div>
+
+    <div>
+        <table id="estilo-tabla">
+
+            <tr>
+                <th>Nombre</th>
+                <th>Ciudad</th>
+                <th>Correo</th>
+
+            </tr>
+
+            <tr>
+                <td>Juan</td>
+                <td>Cali</td>
+                <td>juan@correo.com</td>
+            </tr>
+
+            <tr>
+                <td>Camila</td>
+                <td>Pereira</td>
+                <td>camila@corre.com</td>
+            </tr>
+            <tr>
+                <td>Luis</td>
+                <td>Cucuta</td>
+                <td>luis@correo.com</td>
+
+            </tr>
+
+
+        </table>
+
+
+    </div>
+
+    <div>
+        <h1>Posicionamiento</h1>
+        <div class="relative">
+            Relativo
+            <div class="absolute">
+                absoluto
+                <div class="fixed">
+                    fijado
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda nam quae inventore molestiae facilis? Corporis nemo, debitis eius, eveniet, at sit quaerat cum aliquam corrupti numquam totam odio quis tenetur?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <h1>float</h1>
+        <div>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus accusantium voluptate minima laborum, reiciendis velit culpa deleniti pariatur amet officia voluptatem quam earum necessitatibus unde, fugiat asperiores eum! Quasi, ex.
+                <img class="float" src="https://www.lavanguardia.com/files/og_thumbnail/uploads/2023/07/13/64b03abb139f7.jpeg">
+            </p>
+        </div>
+    </div>
+
+    <br><br>
+    
+    <div>
+        imagenes <br><br>
+
+        <img class="imagen1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA5dCyXhvxU-0PanlfRLUEJ5lUUG8s81SdCMTfU2lwJw&s">
+
+        <img class="imagen2" src="https://balonlatino.net/wp-content/uploads/2023/09/maxresdefault-1.jpg">
+
+        <img class="imagen3" src="https://imagenes.eldebate.com/files/main_image/files/fp/uploads/2023/07/09/64aa797093b14.r_d.773-474-5868.jpeg">
+    </div>
+
+    <div class="transition">
+        <h1>Transiciones</h1>
+    </div>
+
+    <div class="animation">
+        <h1>Animaciones</h1>
+    </div>
+
+    <form action="">
+        <label for=""> Nombre </label>
+        <input type="text" placeholder="Nombre">
+        <label for=""> Descripción </label>
+        <textarea name="" id=""></textarea>
+        <label for="">Pais</label>
+        <select name="" id="">
+            <option value="">Colombia</option>
+            <option value="">Canada</option>
+            <option value="">Chile</option>
+        </select>
+        <button>Enviar</button>
+    </form>
+
+    <h1>Grid</h1>
+    <div class="grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+
+    </div>
+
+
+</body>
+
+<!--Importar una familia de fuentes externa a la predeterminada llamada "audiowide"-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+
+<style>
+    .color1 {
+        background-color:  tomato; /* Colores predeterminados */
+        color: #c5d61d; /*Forma color hexadecimal*/
+        border: solid; /* Tipo de borde del elemento */
+        border-color: rgb(9, 42, 205); /* Forma rgb */
+        opacity: 0.5;
+    }
+
+    .color2{
+        /* tamaño del div */
+        width: 80%; /* Ancho  */
+        height: 300px; /* Largo */ 
+
+        /* Imagen de fondo */
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzdD9XmFwNV0XRg8h5zqg4iiEjiC9OIYaBzmT8sy7QGw&s"); /* Colocar imagen de fondo por URL */
+        background-repeat:no-repeat ; /* Si la imagen se repite llenando el espacio del div */
+        background-position: right top; /* Ubica a la imagen a lo largo del div */
+        background-attachment: scroll ; /* Se queda en un punto fijo en la pantalla, si se pone "scroll" se mantiene en un punto de la pagina como tal */
+
+    }
+
+    .bordes {
+        /* Bordes */
+        border-style: dotted solid dashed double; /* Tipo de borde, abarca cada lado del cuadrado */
+        border-color: #15e2c0; /* Color del borde */
+        border-width: 5px; /*Tamaño del borde*/
+        border-radius: 10px; /* Redondeo de las esquinas del borde */
+    }
+
+    .margenes {
+         /* Margenes: externo al borde */
+         margin-left: 50px ;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        
+    }
+
+    .padding {
+        /* padding: relleno, interno al borde */
+        padding-top: 50px;
+        padding-left: 30px;
+        padding-right: 50px;
+    }
+
+    .alineacion-texto {
+        text-align: center; /* alineación del texto general */
+        /* text-align-last: right; Alineación de la última linea del texto */
+        /* direction: ltr; Right to left */
+        text-decoration-line: underline; /* Tipo de decoración */
+        text-decoration-color: red; /* Color de la decoración */
+        text-decoration-style: dotted; /* Tipo de decoración */
+        text-decoration-thickness: 5px ; /* Espesor de la decoración */
+
+        text-transform: capitalize; /* Modificar el texto a mayuscula, minuscula o primera en mayuscula */
+        text-indent: 50px; /* Espaciado de la primera linea, una sangría */
+        letter-spacing: 2px; /* Espacio entre letras */
+        line-height: 2; /* Tamaño de renglón */
+        word-spacing: 10px; /* Espacio entre palabras */
+        /* font-weight: 800; espesor de la letra */
+    }
+
+    .text-shadow{
+        color: tomato;
+        text-shadow: 2px 2px 5px #e215b6; /*Sombra del titulo, la misma palabra pero detrás, orden de los numeros: horizontal, vertical, opacidad-claridad*/ 
+        font-family: "Audiowide", sans-serif; /* Fuente de letra */
+        font-style: oblique;  /* Tipo de letra, italica, negrilla, etc */
+        font-size: 60px;
+
+    }
+
+    .enlace {
+        text-decoration: none; /* Linea debajo del texto */
+        background-color: #de39b4; /* Color del fondo */
+        padding: 5px; /* Espaciado exterior de la margen */
+        border-radius: 5px; /* Redondeo del cuadro */
+        border-color: yellow; /* Color del borde */
+        border-style: solid; /* Tipo de borde */
+        display: inline-block; /* Para que no se sobreponga con nada*/
+        text-align: center; /* Alineación con el cursor*/
+        cursor: progress; /* Cambiar el tipo de cursor cuando está encima del link*/
+    }
+    /* pseudoclases, funciona para que al hacer algo, tenga un efecto en los elementos que tienen esa clase */
+
+    /* Cambia de color cuando se le pasa el mouse por encima */
+   .enlace:hover {
+    color: #c5d61d;
+    background-color: aquamarine;
+    
+   }
+
+   /* cambia cuando el link ha sido visitado */
+   .enlace:active{
+    color: #15e2c0;
+   }
+
+   /* Cambia el color cuando el link no ha sido visitado */
+   .enlace:link {
+    color: grey;
+   }
+    
+   /* estilos para el elemento de la lista, a la etiqueta como tal, no a una clase especifica */
+   ul>li {
+    list-style-type: georgian; /* Cambiar los items de la lista */
+    /* list-style-image: url("sqpurple.gif"); para poner imagenes como items*/
+    background-color: antiquewhite; /* Color de fondo */
+    display: inline; /* Organizacion de los items */
+    visibility: collapse; /* Sirve para ocultar los items para el usuario */
+
+   }
+
+   /* estilos para la lista como tal */
+   ul {
+    background-color: tomato;
+    opacity: 0.1;
+    padding: 20px;
+   }
+
+   /* forma para referenciar una tabla con un id, antes del numeral seria para todas las tablas de la pagina */
+   /* con el numeral es para una tabla particular */
+   table#estilo-tabla{
+    border: 1px solid;
+    width: 70%;
+    text-align: center;
+    border-collapse: collapse;
+    
+   }
+
+   th, td {
+    border: 1px solid;
+    padding: 10px;
+    border-color: #2260bd;
+   }
+
+   table#estilo-tabla tr:nth-child(even){
+    background-color: #ffd1d1;
+   }
+
+   table#estilo-tabla tr:hover {
+    background-color: #c5d61d;
+    color: aliceblue;
+   }
+
+   table#estilo-tabla  th{
+    background-color: #04918a;
+    color: rgb(167, 240, 140);
+   }
+
+   /* Se adapta a la posicion del padre */
+   .relative{
+    border: 3px solid #2260bd; 
+    width: 400px; /* Anchura del div */
+    height: 200px; /* Altura del div */
+    position: relative; /* Mas o menos quiere decir que el div se adapta */
+
+   }
+
+   /* Mantiene su posicion fija */
+   .absolute{
+    border: 3px solid #e215b6;
+    width: 200px; /* anchura del div */
+    height: 100px; /*altura del div */
+    right: 0; /* Significa que el numero de pixeles entre el div y la derecha son 0 */
+    top: 80px; /* Significa que el numero de pixeles entre el div y arriba son 80 */
+    position: absolute; /* Mas o menos quiere decir que se mantiene fijo el div */
+
+    /* Alineacion */
+    text-align: right; /* Sirve para alinear/acomodar el texto, izquierda, derecha, centro */
+
+   }
+
+   .fixed {
+    border: 3px solid green;
+    width: 100px;
+    height: 50px;
+    left: 0;
+    top: 200px;
+    position: fixed; /* El elemento se queda en el mismo lugar de la pantalla sin importar que suba o baje 
+                        en la pagina, piensalo como los anuncios */
+    background-color: #c5d61d;
+
+    /* Desbordado */
+    overflow: auto; /* Sirve para adaptar un texto que se puede salir de las dimensiones de un div */
+   }
+
+   .float {
+    width: 100px;
+    height: 150px;
+    float: left; /* Un elemento pueda flotar y no interponerse encima de otros elementos de la pagina */
+   }
+
+
+   /* Pseudo elementos */
+   h1::first-letter{
+    color: red;
+    background-color: aquamarine;
+    font-size: 50px;
+   }
+
+   .imagen1 {
+    width: 30%;
+    border-radius: 50px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+    outline-color: #e215b6;
+    outline-style: solid;
+
+   }
+
+   .imagen2 {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 5px 1px 20px red;
+   }
+
+   .imagen3 {
+    width: 60%;
+    display: block;
+    margin-top: 50px;
+
+    filter: blur(4px); /* Difuminar */
+    filter: brightness(250%); /* Brillo */
+    filter: contrast(100%); /* Contraste */
+    filter: grayscale(80%); /* Escala de grises */
+    filter: hue-rotate(180deg); /*  */
+    filter: invert(100%); /* Inversión de colores */
+    filter: saturate(5); /* Saturacion */
+    filter: sepia(50%); /* Sepia */
+
+    /* recordar que solo toma el ultimo filtro aplicado */
+   }
+
+   .imagen3:hover {
+    width: 70%;
+    transition: width 2s height 4s;
+   }
+
+   .transition{
+    background-color: tomato;
+    width: 20%;
+    height: 100px;
+    transition: width 2s, transform 2s;
+    transition-timing-function: linear;
+    transition-timing-function: ease;
+    transition-timing-function: ease-in;
+    transition-timing-function: ease-out; 
+    transition-delay: 0.5s;
+
+
+
+   }
+
+   .transition:hover{
+    width: 30%;
+    transform: translate(120px, 50%);
+    transform: rotate(90deg);
+
+   }
+
+   .animation {
+    width: 25%;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    /* animation-name: ejemplo; */
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+   }
+
+   @keyframes ejemplo {
+        0%{border-radius: 5px; background-color: red; left: 0; top: 0}
+        25%{border-radius: 20px; background-color: yellow; left: 200px; top: 0}
+        50%{border-radius: 50px blue; left: 200px; top: 200px}
+        75%{border-radius: 20px green; left: 0; top: 200px}
+        100%{border-radius: 5px; background-color: red; left: 0; top: 0}
+
+   }
+
+   /* Estilos del formulario */
+   input, textarea, select {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid #04918a;
+    border-radius: 5px;
+    box-sizing: border-box;
+   }
+
+   button {
+    border-radius: 5px;
+    color: white;
+    background-color: chocolate;
+    padding: 10px, 20px;
+    width: 100%;
+    margin: 8px;
+    border: none;
+    cursor: pointer;
+   }
+
+   button:hover {
+    background-color: rgb(223, 143, 85);
+   }
+
+   label{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+    font-weight: bold;
+   }
+
+   /* cuadricula */
+   .grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    background-color: #15e2c0;
+    padding: 10px;
+   }
+
+   .grid > div {
+    background-color: antiquewhite;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+
+   }
+
+   /* Medaqueries para diseño responsive */
+   @media screen and (max-width: 600px) {
+        button {
+            width: 200px;
+            background-color: #e215b6;
+        }
+
+   }
+   @media screen and (min-width: 600px) {
+        button {
+            width: 50px;
+            background-color: #2260bd;
+        }
+
+   }
+   
+
+
+
+   
+</style>
+
+</html>

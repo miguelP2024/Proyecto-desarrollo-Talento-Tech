@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+//Primer ejercicio: crear un algoritmo que imprima los numeros de 1 en 1 hasta el 20
+// var contador = 1
+// document.write("Se comienza a imprimir")
+
+// while(contador <=200){ //el while seguirá mientras esta condicion sea verdadera
+//     document.write(contador, "<br>") 
+//     contador=contador+1 //recordar cambiar el valor de la variable para evitar bucles infinitos
+// }
+// document.write("la impresión acabó")
+
+//Segundo ejercicio: crear un algoritmo que pida palabras y que finalice cuando le ingrese la palabra "PARAR"
+// var palabra = ""
+// while(palabra != "PARAR") {
+//     palabra = prompt("Ingresa una palabra: ")
+//     document.write(palabra, "<br>")
+// }
+
+// //tercer ejercicio: Crear un algoritmo que reciba un numero y lo sume con los anteriores
+//hasta que el total de la suma de 20
+// var suma = 0
+// while(suma<20){
+//     var numero = parseInt(prompt("Ingresa un número"))
+//     document. write(" El numero ingresado es: ", numero, "<br>")
+
+//     suma= suma+numero
+//     document.write("la suma va en: ",suma, "<br>")
+
+// }
+
+//cuarto ejercicio: crear un algoritmo que solicite un numero y lo sume solo si es par
+//dejara de solicitar el numero cuando se ingrese el numero 0
+
+// var suma = 0
+// var numero 
+// while(numero != 0){
+//     numero=parseFloat(prompt("Ingresa un número para sumar"))
+//     document.write("el numero ingresado es: ",numero, "<br>")
+
+//     if (numero%2 == 0 ) {
+//         suma= suma + numero
+//         document.write("La suma va en: ", suma, "<br>")
+//     }
+//     else {
+//         document.write("no se suma nada", "<br>")
+//     }
+
+// }
+// document.write("La suma total es: ", suma)
+
+// quinto ejercicio: escribe un programa que tenga un numero definido y luego permita
+// al usuario adivinar ese número, el programa sigue solicitando números con un ciclo while
+// hasta que el usuario adivine correctamente
+
+var numero 
+while(numero!=17){
+    numero=parseFloat(prompt("Intenta adivinar el número que estoy pensando: "))
+            document.write("Sigue intentando, no era ", numero + "<br>" )
+
+    
+}
+document.write("felicitaciones, adivinaste el número, es 17")
+
+
+</script>
+</html>
