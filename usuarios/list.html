@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list</title>
+
+    <script src="../assets/loadNavbar.js"> </script>
+    <div id="navbar"></div>
+
+</head>
+<body>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Correo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="usuarios">
+            
+        </tbody>
+    </table>
+    
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        console.log("cargue")
+        fetch('https://backend-nodejs-cyan.vercel.app/usuario')
+        .then(response => response.json())
+        .then(data => {
+
+            const tableBody = document.getElementById('usuarios')
+            //user es una variable que va a tomar el valor de cada objeto de la base de datos
+            //posteriormente se va a acceder a un elemento de ese objeto (nombre, apellido, correo)
+            //y se va guardando en el cuerpo de la tabla
+            data.forEach(user => {
+                //creamos una etiqueta <tr> usando js
+                const row = document.createElement('tr')
+                //creamos una etiqueta <td> usando js
+                const nombre = document.createElement('td')
+                //agregamos el valor a la etiqueta creada
+                nombre.textContent = user.nombre
+                //agregamos el <td> al <tr>
+                row.appendChild(nombre)
+
+                const apellidos = document.createElement('td')
+                apellidos.textContent = user.apellidos
+                row.appendChild(apellidos)
+
+                const correo = document.createElement('td')
+                correo.textContent = user.correo
+                row.appendChild(correo)
+
+                const acciones = document.createElement('td')
+                const editar = document.createElement('a')
+                editar.textContent = 'Editar'
+                editar.href = './create.html?id='+user._id
+                editar.classList.add('btn', 'btn-warning')
+
+                const eliminar = document.createElement('button')
+                eliminar.textContent = 'Eliminar'
+                eliminar.classList.add('btn', 'btn-danger')
+
+                eliminar.addEventListener('click', function(){
+                    const textoConfirmacion = '¿Esta seguro que desea eliminar a '+user.nombre+'?'
+                    if(confirm(textoConfirmacion)){
+                        eliminarUsuario(user._id, row)
+                    }
+                })
+
+                acciones.appendChild(eliminar)//se agrega eliminar a acciones
+                acciones.appendChild(editar) //se agrega editar a acciones
+                row.appendChild(acciones) // se agrega acciones a la parte de row
+                
+                //agregamos el <tr> a la tabla
+                tableBody.appendChild(row)
+            })
+
+        })
+    })
+
+    //funcion para eliminar un usuario pasandole el id
+    function eliminarUsuario(id, row){
+        //Es la URL de eliminacion, por ejemplo
+        //https://backend-nodejs-cyan.vercel.app/usuario/66626c7370a936e23f9adb60
+        const deleteUrl = 'https://backend-nodejs-cyan.vercel.app/usuario/'+id
+        //ejecutar la accion del API
+        fetch(deleteUrl, {
+            method: 'DELETE' //defino el metodo a utilizar
+        })
+        .then(response => {
+            //obtener la respuesta del servidor
+            if(response.status ==200){ //validando que sea exitosa
+                row.remove()//eliminar al usuario de la lista
+                alert('Usuario eliminado correctamente') //mostrar mensaje de confirmación
+            }
+            else{
+                alert('Error al eliminar al usuario')//Mostrar mensaje de error en caso de fallo en la validacion
+            }
+        })
+        .catch(error => console.log('error: ', error))
+    }
+</script>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../assets/loadNavbar.js"> </script>
+    <div id="navbar"></div>
+
+
+
+</head>
+<body>
+
+    <form id="guardarUsuario" class="container">
+        <label for="nombre"> Nombre </label>
+        <input type="text" placeholder="Nombre" id="nombre" required class="form-control">
+
+        <label for="apellidos">  Apellidos</label>
+        <input type="text" placeholder="Apellidos" id="apellidos" required class="form-control">
+
+        <label for="correo"> Correo </label>
+        <input type="email" placeholder="Correo" id="correo" required class="form-control">
+
+        <label for="password"> Contraseña </label>
+        <input type="password" placeholder="Contraseña" id="password" required class="form-control">
+
+        <button type="submit" class="btn btn-primary col-12"> Enviar </button>
+
+    </form>
+
+
+
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+
+        const searchParams = new URLSearchParams(window.location.search)
+        const id = searchParams.get('id')//asignar el id a una variable
+        
+        const form = document.getElementById('guardarUsuario')
+
+        form.addEventListener('submit', function(event){
+            event.preventDefault();
+            const data = {
+                nombre: document.getElementById('nombre').value,
+                apellidos: document.getElementById('apellidos').value,
+                correo: document.getElementById('correo').value,
+                password: document.getElementById('password').value
+            }
+
+            if(searchParams.has('id')){
+                submitForm(data, "https://backend-nodejs-cyan.vercel.app/usuario/"+id, "PUT")
+            }
+            else{
+                submitForm(data, "https://backend-nodejs-cyan.vercel.app/usuario", "POST")
+            }
+
+            
+            
+        })
+
+        //obtenemos el id de la url
+        if(searchParams.has('id')){
+            console.log(id)
+            //consultar la información del usuario del id asignado
+            fetch('https://backend-nodejs-cyan.vercel.app/usuario/'+id)
+            .then(response => response.json()) //convierte a formato json
+            .then(data => {
+                //asignar información al usuario
+                document.getElementById('nombre').value= data.nombre
+                document.getElementById('apellidos').value= data.apellidos
+                document.getElementById('correo').value= data.correo
+                
+            })
+        }
+    })
+
+
+    function submitForm(data, url, method){
+        fetch(url, {
+                method: method,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response=> {
+                return response.json()
+            })
+            .then(data=> {
+                if(data.status == "success"){
+                    alert('Usuario registrado correctamente')
+                    window.location.href = "./list.html"
+                }
+                else{
+                    alert(data.message)
+                }
+            })
+            .catch(error=> console.log("Error", error))
+    }
+    
+</script>
+
+
+
+</html>
